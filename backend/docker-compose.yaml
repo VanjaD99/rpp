@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: rpp-postgres
+    image: postgres
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env.development
+    volumes:
+      - ./src/main/resources/sqlScripts/:/docker-entrypoint-initdb.d/
+  pgadmin:
+    container_name: rpps-pgadmin
+    image: dpage/pgadmin4:5.5
+    restart: always
+    env_file:
+      - ./.env.development
+    ports:
+      - "8081:80"
+    volumes:
+      - ~/pgadmin:/var/lib/pgadmin

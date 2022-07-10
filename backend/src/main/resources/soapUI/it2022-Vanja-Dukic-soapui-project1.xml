@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<con:soapui-project
+  id="4be4dd30-674f-4480-ad9b-7319fa13d774"
+  activeEnvironment="Default"
+  name="it2022-Vanja-Dukic"
+  resourceRoot=""
+  soapui-version="5.6.0"
+  xmlns:con="http://eviware.com/soapui/config"
+><con:settings /><con:interface
+    xsi:type="con:RestService"
+    id="0a882082-ae9a-4f12-827a-f98862938261"
+    wadlVersion="http://wadl.dev.java.net/2009/02"
+    name="http://localhost:8083"
+    type="rest"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  ><con:settings /><con:definitionCache type="TEXT" rootPart="" /><con:endpoints
+    ><con:endpoint
+      >http://localhost:8083</con:endpoint></con:endpoints><con:resource
+      name="Preduzece Get All"
+      path="/preduzece"
+      id="f3ccb09d-e2d1-4c46-942d-82c818c00cb8"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Get All"
+        id="08b44c35-73bb-43ed-bcf1-036dd5c85c81"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>0</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Preduzece Get All"
+          id="ff7535bf-2829-4e07-a840-79c98c293275"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/preduzece</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Preduzece Get By ID"
+      path="/preduzece/{id}"
+      id="87e0395c-efa6-4f30-b5ff-cfd4b96de146"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:value>2</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >2</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By ID"
+        id="535777af-37f6-43d4-85da-d5b6d33821be"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+            xmlns:ns="http://localhost/preduzece/2"
+          >ns:Response</con:element></con:representation><con:request
+          name="Preduzece Get By ID"
+          id="12af584b-0bdb-4f25-9f82-e24cf27fef57"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/preduzece/2</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="1"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Preduzece Get By Naziv"
+      path="/preduzeceNaziv/{naziv}"
+      id="264bbb80-8011-4da0-a1c3-3aea4d50f1ef"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >naziv</con:name><con:value>naziv</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >naziv</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By Naziv"
+        id="798e3258-e0ed-4788-9a8e-25be0e3cb2f2"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Preduzece Get By Naziv"
+          id="8092ea20-c594-4a2f-9b56-d1548b2cb1b9"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/preduzeceNaziv/naziv</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="naziv"
+              value="doo"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Preduzece Insert"
+      path="/preduzece"
+      id="e5a13508-28c3-4156-a4ed-353505770db3"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Preduzece Insert"
+        id="3f96ca03-fca2-4dfe-b875-398968ab1ba5"
+        method="POST"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation type="FAULT"><con:mediaType
+          >application/json</con:mediaType><con:status
+          >500</con:status><con:params /><con:element
+            xmlns:pred="http://localhost/preduzece"
+          >pred:Fault</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Preduzece Insert"
+          id="72b30391-ae55-4ece-9b25-f77b137c7df0"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+   "id": 5,
+   "naziv": "Novo preduzece",
+   "opis": "Novi proizvodjac",
+   "pib": 3374,
+   "sediste": "Sremska Mitrovica"
+}</con:request><con:originalUri
+          >http://localhost/preduzece</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Preduzece Update"
+      path="/preduzece"
+      id="de155479-94ea-4b25-9fac-961affa0b183"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Preduzece Update"
+        id="a571e1de-8d26-4d54-89d0-8e0ea6bbd354"
+        method="PUT"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Preduzece Update"
+          id="a5bdb8c2-929b-4e6a-a779-9382f885ce44"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": -46,
+      "naziv": "Novo preduzece",
+      "opis": "Novi proiz",
+      "pib": 3374,
+      "sediste": "Sremska Mitrovica"
+ }</con:request><con:originalUri
+          >http://localhost/preduzece</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Preduzece Delete"
+      path="/preduzece/{id}"
+      id="b2a26a24-8b9d-4640-bcca-da37f13e7e57"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:style
+          >TEMPLATE</con:style></con:parameter></con:parameters><con:method
+        name="Method Preduzece Delete"
+        id="46da9f03-04cc-4d04-9846-a27d7b02fb86"
+        method="DELETE"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Preduzece Delete"
+          id="af5a65f1-0861-402b-9712-4639c3cb7b53"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/preduzece/-46</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="-100"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Get All"
+      path="/obrazovanje"
+      id="128844c9-a913-4a92-91b8-7823d6ff236d"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Get All"
+        id="6479c0f4-f1e6-40a6-a4d2-42e5940c2ad1"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>0</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Obrazovanje Get All"
+          id="97b2ea71-4f8f-4109-ac33-224b9761654c"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/obrazovanje</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Get By ID"
+      path="/obrazovanje/{id}"
+      id="f352728e-a27c-4be9-bd28-a4592ac43ba3"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:style
+          >TEMPLATE</con:style></con:parameter></con:parameters><con:method
+        name="Method Get By ID"
+        id="f2c9b8a8-96be-4dca-afdb-b22750438dbf"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Obrazovanje Get By ID"
+          id="ea1fa9cd-5bd9-436d-9657-c3cecd2a1a6d"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/obrazovanje/</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="-46"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Get By Naziv"
+      path="/obrazovanjeNaziv/{naziv}"
+      id="bad8b4dd-e1a2-4fb2-b355-4ab6ae895de4"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >naziv</con:name><con:value>doo</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >doo</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By Naziv"
+        id="c324f886-3bc1-4271-af92-e8b9dd5e0fd6"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Obrazovanje Get By Naziv"
+          id="b3e91e61-4b39-4ac4-b859-08671b778365"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/obrazovanjeNaziv/doo</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="naziv"
+              value="gimnazija"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >naziv</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Insert"
+      path="/obrazovanje"
+      id="a4428bac-874b-4b8c-a017-7af41bbd6251"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Obrazovanje Insert"
+        id="fa332fc8-2e12-4895-9444-59ca649d4c8b"
+        method="POST"
+      ><con:settings /><con:parameters /><con:representation
+          type="FAULT"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >500</con:status><con:params /><con:element
+            xmlns:obr="http://localhost/obrazovanje"
+          >obr:Fault</con:element></con:representation><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Obrazovanje Insert"
+          id="8209e6f2-28d0-40d7-8774-248ccff8efcb"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": 5,
+      "naziv": "TEST",
+      "opis": "TEST",
+      "stepenStrucneSpreme": "TEST"
+   }</con:request><con:originalUri
+          >http://localhost/obrazovanje</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Update"
+      path="/obrazovanje"
+      id="0fde786f-0c35-436e-8f6a-ace8d40113c0"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Obrazovanje Update"
+        id="a4a9d788-45aa-4f5a-8225-951bed320fc6"
+        method="PUT"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Obrazovanje Update"
+          id="37f48ad4-3e13-4779-bf55-1f17313b3888"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": -46,
+      "naziv": "TT",
+      "opis": "TEST",
+      "stepenStrucneSpreme": "TEST"
+   }</con:request><con:originalUri
+          >http://localhost/obrazovanje</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Obrazovanje Delete"
+      path="/obrazovanje/{id}"
+      id="d15b1d27-e026-4279-a535-a6ce104e1bb7"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:value>id</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >id</con:default></con:parameter></con:parameters><con:method
+        name="Method Obrazovanje Delete"
+        id="7367ce5e-6d21-450c-a6b8-048f84ed9dfe"
+        method="DELETE"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Obrazovanje Delete"
+          id="9b8ac47e-0272-4f8a-97ef-2507171762bc"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/obrazovanje/-100</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="-100"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Sektor Get All"
+      path="/sektor"
+      id="1ccaaf66-d297-4026-b6cb-af5e2b1d5e3c"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Get All"
+        id="d9816f82-b43f-4b6d-84a6-a5e8adaf5e06"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Sektor Get All"
+          id="dea2486d-d866-4b7e-bb24-5458c281ce4b"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/sektor</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Sektor Get By ID"
+      path="/sektor/{id}"
+      id="1225faab-06d1-4ad6-aa15-6b70ccb61ed3"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:style
+          >TEMPLATE</con:style></con:parameter></con:parameters><con:method
+        name="Method Get By ID"
+        id="3b4f8449-8156-4226-ba2c-e50d90f6c42e"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Sektor Get By ID"
+          id="28d95491-5531-4656-9803-0514419d7afb"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/sektor/</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="2"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Sektor Get By Naziv"
+      path="/sektorNaziv/{naziv}"
+      id="ac78da40-6c35-4fe5-a55c-c001d3dcfe6f"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >naziv</con:name><con:value>naziv</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >naziv</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By Naziv"
+        id="a5868f85-f8e1-411f-a573-fbcfc98121d8"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Sektor Get By Naziv"
+          id="00e45413-1f37-49d8-938d-83ac73dfbeed"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/sektorNaziv/proiz</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="naziv"
+              value="proiz"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Sektor Insert"
+      path="/sektor"
+      id="1d8a5721-c69e-4203-bc76-c7c4abfbb63f"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Sektor Insert"
+        id="5a92b222-3033-402d-a63e-8dfb24708a1a"
+        method="POST"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation type="FAULT"><con:mediaType
+          >application/json</con:mediaType><con:status
+          >500</con:status><con:params /><con:element
+            xmlns:sek="http://localhost/sektor"
+          >sek:Fault</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Sektor Insert"
+          id="907979c3-0f82-49ca-a667-a3d340576506"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": 6,
+      "naziv": "test",
+      "oznaka": "test",
+      "preduzece":       {
+         "id": 1,
+         "naziv": "Matross DOO",
+         "opis": "Prehrambeno-hemijsko",
+         "pib": 3345,
+         "sediste": "Sremska Mitrovica"
+      }
+   }</con:request><con:originalUri
+          >http://localhost/sektor</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Sektor Update"
+      path="/sektor"
+      id="fb96c6b7-bd2f-46b2-a9d5-f659d917f060"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Sektor Update"
+        id="9dd1856f-d5c4-4724-92f1-c5f1cdfd8466"
+        method="PUT"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Sektor Update"
+          id="fa6cb659-c4e7-4587-bca8-19557f903d0b"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": -46,
+      "naziv": "test",
+      "oznaka": "izmenjeno",
+      "preduzece":       {
+         "id": 1,
+         "naziv": "Matross DOO",
+         "opis": "Prehrambeno-hemijsko",
+         "pib": 3345,
+         "sediste": "Sremska Mitrovica"
+      }
+   }</con:request><con:originalUri
+          >http://localhost/sektor</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Sektor Delete"
+      path="/sektor/{id}"
+      id="9ca642d5-4e59-4cb6-ba07-fcebbc9b48df"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:style
+          >TEMPLATE</con:style></con:parameter></con:parameters><con:method
+        name="Method Delete"
+        id="37a98a23-e353-4a9e-9412-944e3d460503"
+        method="DELETE"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Sektor Delete"
+          id="0ed7ee1f-6ca1-44e4-a59a-f6e7f59b0046"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/sektor/-100</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="4"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Radnik Get All"
+      path="/radnik"
+      id="0cebeb86-14e2-4753-883c-bfe449667665"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Get All"
+        id="0b9f7059-ae12-4ec1-9ce3-755f76eafa8f"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>0</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>0</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Radnik Get All"
+          id="97c23a1d-27a1-42ee-a531-531f24c8c449"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnik</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Radnik Get By ID"
+      path="/radnik/{id}"
+      id="25465902-077c-44b1-8b6b-7458b824c8d5"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:value>id</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >id</con:default></con:parameter></con:parameters><con:method
+        name="Radnik Get By ID"
+        id="7e325bad-0b55-4c7b-81ae-969d0de418b9"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="FAULT"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >500</con:status><con:params /><con:element
+            xmlns:ns="http://localhost/radnik/5"
+          >ns:Fault</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Radnik Get By ID"
+          id="6c153fcf-1a5a-420a-b49d-7ac481cc3990"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnik/5</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="1"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Radnik Get By Sektor"
+      path="/radnikBySektor/{id}"
+      id="2efdbd62-0314-4e8b-9c2c-daf575423d20"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:value>id</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >id</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By Sektor"
+        id="88fa53c2-fdcb-4f58-81b5-49efaaed8979"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Get Radnik By Sektor"
+          id="a450c345-ec65-4ee3-bac8-1d6a6240d473"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnikBySektor/1</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="1"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Radnik Get By Less Lk"
+      path="/radnikByLk/{broj_lk}"
+      id="336f822f-3aae-47cd-93bf-2e70f1db2b50"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >broj_lk</con:name><con:value>broj_lk</con:value><con:style
+          >TEMPLATE</con:style><con:default
+          >broj_lk</con:default></con:parameter></con:parameters><con:method
+        name="Method Get By Less Lk"
+        id="fed746ed-8b50-4356-95f4-f0d466b42dac"
+        method="GET"
+      ><con:settings /><con:parameters /><con:representation
+          type="RESPONSE"
+        ><con:mediaType>application/json</con:mediaType><con:status
+          >200</con:status><con:params /><con:element
+          >Response</con:element></con:representation><con:request
+          name="Radnik Get By Less Lk"
+          id="ea9938c1-bc92-457f-86a0-632f6d421e9a"
+          mediaType="application/json"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnikByLk/10000</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="broj_lk"
+              value="6678545"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters></con:request></con:method></con:resource><con:resource
+      name="Radnik Insert"
+      path="/radnik"
+      id="35d6f3c5-a146-4084-b3c0-947c0362cefc"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Radnik Insert"
+        id="09a6d20c-71a3-496e-80e9-42840f5a7241"
+        method="POST"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation type="FAULT"><con:mediaType
+          >application/json</con:mediaType><con:status
+          >500</con:status><con:params /><con:element
+            xmlns:rad="http://localhost/radnik"
+          >rad:Fault</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Radnik Insert"
+          id="1c74d599-1034-45ab-8063-9db20982357a"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+      "id": 99,
+      "brojLk": 1122,
+      "ime": "Vanja",
+      "prezime": "Dukic",
+      "obrazovanje":       {
+         "id": 1,
+         "naziv": "Gimnazija",
+         "opis": "teritorija RS",
+         "stepenStrucneSpreme": "gimnazija"
+      },
+      "sektor":       {
+         "id": 1,
+         "naziv": "Proizvodnja",
+         "oznaka": "P",
+         "preduzece":          {
+            "id": 3,
+            "naziv": "Euro Plastic DOO",
+            "opis": "Zanatska radnja",
+            "pib": 3367,
+            "sediste": "Sremska Mitrovica"
+         }
+      }
+   }</con:request><con:originalUri
+          >http://localhost/radnik</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Nista"
+      path=""
+      id="9f89c357-0cd6-4eb9-8a7d-e6a9df0f006f"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Radnik Update"
+        id="68fb7467-b9a3-4c7c-9578-64414301d43e"
+        method="PUT"
+      ><con:settings /><con:parameters /><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation type="FAULT"><con:mediaType
+            xsi:nil="true"
+          /><con:status>409</con:status><con:params /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="FAULT"
+        ><con:mediaType xsi:nil="true" /><con:status>409</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Radnik Update"
+          id="90ac3c6c-b704-4c6c-b833-27326cdb833c"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnik</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource><con:resource
+      name="Radnik Delete"
+      path="/radnik/{id}"
+      id="322c8320-33c7-4684-b196-52e4d648e77a"
+    ><con:settings /><con:parameters><con:parameter><con:name
+          >id</con:name><con:style
+          >TEMPLATE</con:style></con:parameter></con:parameters><con:method
+        name="Method Radnik Delete"
+        id="e472ee7c-85a1-4422-9bf6-05e2018dcc3f"
+        method="DELETE"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Radnik Delete"
+          id="8b8e4cd6-4257-427c-ade8-6f90504bdc39"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+          >http://localhost/radnik/6</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters><entry
+              key="id"
+              value="6"
+              xmlns="http://eviware.com/soapui/config"
+            /></con:parameters><con:parameterOrder><con:entry
+            >id</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource
+      name="Radnik Update"
+      path="/radnik"
+      id="79ae3ebe-17e9-4fb0-aca1-fed1bb930628"
+    ><con:settings /><con:parameters /><con:method
+        name="Method Radnik Update"
+        id="017ceac5-936b-4acb-ba3c-630b6078880d"
+        method="PUT"
+      ><con:settings /><con:parameters /><con:representation
+          type="REQUEST"
+        ><con:mediaType>application/json</con:mediaType><con:params
+          /></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element
+          >data</con:element></con:representation><con:representation
+          type="RESPONSE"
+        ><con:mediaType xsi:nil="true" /><con:status>200</con:status><con:params
+          /><con:element>data</con:element></con:representation><con:request
+          name="Radnik Update"
+          id="cd7c1da5-1934-4050-8b42-3296802ced00"
+          mediaType="application/json"
+          postQueryString="false"
+        ><con:settings><con:setting
+              id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+            >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+          >http://localhost:8083</con:endpoint><con:request>{
+   "id": -100,
+   "brojLk": 6678532,
+   "ime": "Vanja",
+   "prezime": "Dukic",
+   "obrazovanje":    {
+      "id": 1,
+      "naziv": "Gimnazija",
+      "opis": "teritorija RS",
+      "stepenStrucneSpreme": "gimnazija"
+   },
+   "sektor":    {
+      "id": 1,
+      "naziv": "Proizvodnja",
+      "oznaka": "P",
+      "preduzece":       {
+         "id": 3,
+         "naziv": "Euro Plastic DOO",
+         "opis": "Zanatska radnja",
+         "pib": 3367,
+         "sediste": "Sremska Mitrovica"
+      }
+   }
+}</con:request><con:originalUri
+          >http://localhost/radnik</con:originalUri><con:credentials
+          ><con:authType
+            >No Authorization</con:authType></con:credentials><con:jmsConfig
+            JMSDeliveryMode="PERSISTENT"
+          /><con:jmsPropertyConfig /><con:parameters
+          /></con:request></con:method></con:resource></con:interface><con:testSuite
+    id="6706debc-3632-41d6-a0d6-a5236ca1ed47"
+    name="it10g2018 TestSuite"
+  ><con:description
+    >TestSuite generated for REST Service [http://localhost:8083]</con:description><con:settings
+    /><con:runType>SEQUENTIAL</con:runType><con:testCase
+      id="1ae9e500-90d9-48f9-a1d0-88816c1acb58"
+      failOnError="true"
+      failTestCaseOnErrors="true"
+      keepSession="false"
+      maxResults="0"
+      name="http://localhost:8083 TestSuite"
+      searchProperties="true"
+    ><con:settings /><con:testStep
+        type="restrequest"
+        name="Preduzece Get All"
+        id="351d2cb9-7eba-4111-88e4-721fd603c9f4"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzece"
+          methodName="Method Get All"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Get All"
+            id="ff7535bf-2829-4e07-a840-79c98c293275"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/preduzece</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="e804ce26-1c09-46c1-9d4b-f049d0ed6863"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Preduzece Get By ID"
+        id="81c948ea-38b7-419f-b127-96cb7745a005"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzece/{id}"
+          methodName="Method Get By ID"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Get By ID"
+            id="12af584b-0bdb-4f25-9f82-e24cf27fef57"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/preduzece/2</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="f14daaa1-8d6d-45d9-9917-26b30b61cffe"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="1"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Preduzece Get By Naziv"
+        id="f66e1042-10d2-4c74-b48d-a5ae0893dc59"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzeceNaziv/{naziv}"
+          methodName="Method Get By Naziv"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Get By Naziv"
+            id="8092ea20-c594-4a2f-9b56-d1548b2cb1b9"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/preduzeceNaziv/naziv</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="82529607-4b5b-4259-9bb2-1305607923db"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="naziv"
+                value="doo"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Preduzece Insert"
+        id="a4386d8c-5882-4507-9e0f-2d90f5576783"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzece"
+          methodName="Method Preduzece Insert"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Insert"
+            id="72b30391-ae55-4ece-9b25-f77b137c7df0"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+   "id":25,
+   "naziv": "Novo preduzece",
+   "opis": "Novi proizvodjac",
+   "pib": 3374,
+   "sediste": "Sremska Mitrovica"
+}</con:request><con:originalUri
+            >http://localhost/preduzece</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="f3eee392-fcf0-418e-ad12-211677c628d3"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Preduzece Update"
+        id="e0019494-7e51-4f6b-ae29-b42d502994bb"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzece"
+          methodName="Method Preduzece Update"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Update"
+            id="a5bdb8c2-929b-4e6a-a779-9382f885ce44"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": 3,
+      "naziv": "Novo preduzece",
+      "opis": "Novi proiz",
+      "pib": 3374,
+      "sediste": "Sremska Mitrovica"
+ }</con:request><con:originalUri
+            >http://localhost/preduzece</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="d16a1fd3-c839-4e4d-a13f-a5e639e9688e"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Preduzece Delete"
+        id="fe0db480-6d66-4d85-96a2-be6dc0728fa8"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/preduzece/{id}"
+          methodName="Method Preduzece Delete"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Preduzece Delete"
+            id="af5a65f1-0861-402b-9712-4639c3cb7b53"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/preduzece/-46</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="685cb24a-55cd-4afb-8007-27bc693c427e"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="-100"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Get All"
+        id="e31b9b22-01e2-4e05-a707-3751681ac0b1"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanje"
+          methodName="Method Get All"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Get All"
+            id="97b2ea71-4f8f-4109-ac33-224b9761654c"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/obrazovanje</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="d82b8e42-c560-428d-af3b-34583ce630a2"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Get By ID"
+        id="16ab8e0a-5234-487d-be77-1be8883fd171"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanje/{id}"
+          methodName="Method Get By ID"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Get By ID"
+            id="ea1fa9cd-5bd9-436d-9657-c3cecd2a1a6d"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/obrazovanje/</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="c9313d45-ab1f-4769-b82f-09f60a59d876"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="1"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Get By Naziv"
+        id="174bfc22-8e8e-4d86-a794-7161577476c0"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanjeNaziv/{naziv}"
+          methodName="Method Get By Naziv"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Get By Naziv"
+            id="b3e91e61-4b39-4ac4-b859-08671b778365"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/obrazovanjeNaziv/doo</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="7eab723c-8e95-4d74-9a21-44d705bdf9dc"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="naziv"
+                value="gimnazija"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >naziv</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Insert"
+        id="99be87dc-deb5-4614-bb08-ee259cf37aa4"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanje"
+          methodName="Method Obrazovanje Insert"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Insert"
+            id="8209e6f2-28d0-40d7-8774-248ccff8efcb"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": 100,
+      "naziv": "TEST",
+      "opis": "TEST",
+      "stepenStrucneSpreme": "TEST"
+   }</con:request><con:originalUri
+            >http://localhost/obrazovanje</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="67655c42-86ff-4662-8f1f-51013a70c5b6"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Update"
+        id="8933f6fc-c55c-466f-9515-312386250895"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanje"
+          methodName="Method Obrazovanje Update"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Update"
+            id="37f48ad4-3e13-4779-bf55-1f17313b3888"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": -100,
+      "naziv": "TT",
+      "opis": "TEST",
+      "stepenStrucneSpreme": "TEST"
+   }</con:request><con:originalUri
+            >http://localhost/obrazovanje</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="77a063f6-3f91-4a12-b73d-77fca71e1d68"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Obrazovanje Delete"
+        id="4958f96d-b97b-41ab-9602-ec2526b4e5ff"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/obrazovanje/{id}"
+          methodName="Method Obrazovanje Delete"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Obrazovanje Delete"
+            id="9b8ac47e-0272-4f8a-97ef-2507171762bc"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/obrazovanje/-100</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="e832e1c2-7c53-4ef9-889a-f52a3c1ceb84"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="-100"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Get All"
+        id="d0d059dd-5ee8-479c-9857-6ef5365d08b2"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektor"
+          methodName="Method Get All"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Get All"
+            id="dea2486d-d866-4b7e-bb24-5458c281ce4b"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/sektor</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="cad691db-91f7-401b-9b30-907f09ee1f6d"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Get By ID"
+        id="119eab14-5add-4dc0-93c8-166d3c392b91"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektor/{id}"
+          methodName="Method Get By ID"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Get By ID"
+            id="28d95491-5531-4656-9803-0514419d7afb"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/sektor/</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="89c8a01c-d7d2-44e0-8a6c-d6d641063309"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="2"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Get By Naziv"
+        id="246ba085-780a-459e-b22b-93362217904d"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektorNaziv/{naziv}"
+          methodName="Method Get By Naziv"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Get By Naziv"
+            id="00e45413-1f37-49d8-938d-83ac73dfbeed"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/sektorNaziv/proiz</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="163249fa-5aec-4322-8cae-8dca78cf5d01"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="naziv"
+                value="proiz"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Insert"
+        id="cc03728a-0512-4127-ab5f-dc7f14775621"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektor"
+          methodName="Method Sektor Insert"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Insert"
+            id="907979c3-0f82-49ca-a667-a3d340576506"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": 8,
+      "naziv": "test",
+      "oznaka": "test",
+      "preduzece":       {
+         "id": 1,
+         "naziv": "Matross DOO",
+         "opis": "Prehrambeno-hemijsko",
+         "pib": 3345,
+         "sediste": "Sremska Mitrovica"
+      }
+   }</con:request><con:originalUri
+            >http://localhost/sektor</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="066a46a9-a23c-411c-9fc0-43eb337277c3"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Update"
+        id="d009056f-9a46-4ed6-8141-da92bdd0f758"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektor"
+          methodName="Method Sektor Update"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Update"
+            id="fa6cb659-c4e7-4587-bca8-19557f903d0b"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": -46,
+      "naziv": "test",
+      "oznaka": "izmenjeno",
+      "preduzece":       {
+         "id": 1,
+         "naziv": "Matross DOO",
+         "opis": "Prehrambeno-hemijsko",
+         "pib": 3345,
+         "sediste": "Sremska Mitrovica"
+      }
+   }</con:request><con:originalUri
+            >http://localhost/sektor</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="47e212a3-e3da-4fd5-8396-217702f328c6"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Sektor Delete"
+        id="06aab9da-234b-4afc-bbb3-ef90c0b460a5"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/sektor/{id}"
+          methodName="Method Delete"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Sektor Delete"
+            id="0ed7ee1f-6ca1-44e4-a59a-f6e7f59b0046"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/sektor/-100</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="dc8e2eaa-4c8f-48ec-9d55-107b6a1d42db"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="-100"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Get All"
+        id="7fa4d187-0fe0-4124-ad64-329e9668ebbd"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnik"
+          methodName="Method Get All"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Get All"
+            id="97c23a1d-27a1-42ee-a531-531f24c8c449"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/radnik</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="69b138b2-87c1-42c1-9ddb-51744a3938fc"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Get By ID"
+        id="c358210e-97ba-4faf-8f97-4f8fc9b7ebda"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnik/{id}"
+          methodName="Radnik Get By ID"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Get By ID"
+            id="6c153fcf-1a5a-420a-b49d-7ac481cc3990"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/radnik/5</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="20122d11-ece1-4b71-bde6-b7f32012371d"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="1"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Get By Sektor"
+        id="8e67fc1f-f4f5-4cba-9986-b7f7b89ae98f"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnikBySektor/{id}"
+          methodName="Method Get By Sektor"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Get By Sektor"
+            id="a450c345-ec65-4ee3-bac8-1d6a6240d473"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/radnikBySektor/1</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="04e8e565-5117-4afb-82ef-573e187d9c05"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="1"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Get By Less Lk"
+        id="891b81b4-b99c-4200-aba9-ebc453b8ec33"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnikByLk/{broj_lk}"
+          methodName="Method Get By Less Lk"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Get By Less Lk"
+            id="ea9938c1-bc92-457f-86a0-632f6d421e9a"
+            mediaType="application/json"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/radnikByLk/10000</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="14e521f5-5878-4e69-82c4-27d81f25dae9"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="broj_lk"
+                value="6678545"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Insert"
+        id="2b427caa-bd86-4a70-8b75-e64de5ad40aa"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnik"
+          methodName="Method Radnik Insert"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Insert"
+            id="1c74d599-1034-45ab-8063-9db20982357a"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+      "id": 99,
+      "brojLk": 1122,
+      "ime": "Vanja",
+      "prezime": "Dukic",
+      "obrazovanje":       {
+         "id": 1,
+         "naziv": "Gimnazija",
+         "opis": "teritorija RS",
+         "stepenStrucneSpreme": "gimnazija"
+      },
+      "sektor":       {
+         "id": 1,
+         "naziv": "Proizvodnja",
+         "oznaka": "P",
+         "preduzece":          {
+            "id": 3,
+            "naziv": "Euro Plastic DOO",
+            "opis": "Zanatska radnja",
+            "pib": 3367,
+            "sediste": "Sremska Mitrovica"
+         }
+      }
+   }</con:request><con:originalUri
+            >http://localhost/radnik</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="b6404032-b0f5-4c4e-ae4a-253a798e643f"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Delete"
+        id="714c69aa-44fe-4028-943c-4465f951ff98"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnik/{id}"
+          methodName="Method Radnik Delete"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Delete"
+            id="8b8e4cd6-4257-427c-ade8-6f90504bdc39"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request /><con:originalUri
+            >http://localhost/radnik/6</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="1cda4eda-cb61-4f4b-9ca9-f7e751b198b6"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters><entry
+                key="id"
+                value="-100"
+                xmlns="http://eviware.com/soapui/config"
+              /></con:parameters><con:parameterOrder><con:entry
+              >id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep
+        type="restrequest"
+        name="Radnik Update"
+        id="6060c084-bfe7-4c56-9659-93f5bae16373"
+      ><con:settings /><con:config
+          service="http://localhost:8083"
+          resourcePath="/radnik"
+          methodName="Method Radnik Update"
+          xsi:type="con:RestRequestStep"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ><con:restRequest
+            name="Radnik Update"
+            id="cd7c1da5-1934-4050-8b42-3296802ced00"
+            mediaType="application/json"
+            postQueryString="false"
+          ><con:settings><con:setting
+                id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"
+              >&lt;xml-fragment/></con:setting></con:settings><con:endpoint
+            >http://localhost:8083</con:endpoint><con:request>{
+   "id": 1,
+   "brojLk": 6678532,
+   "ime": "Vanja",
+   "prezime": "Dukic",
+   "obrazovanje":    {
+      "id": 1,
+      "naziv": "Gimnazija",
+      "opis": "teritorija RS",
+      "stepenStrucneSpreme": "gimnazija"
+   },
+   "sektor":    {
+      "id": 1,
+      "naziv": "Proizvodnja",
+      "oznaka": "P",
+      "preduzece":       {
+         "id": 3,
+         "naziv": "Novo preduzece",
+         "opis": "Novi proiz",
+         "pib": 3374,
+         "sediste": "Sremska Mitrovica"
+      }
+   }
+}</con:request><con:originalUri
+            >http://localhost/radnik</con:originalUri><con:assertion
+              type="Valid HTTP Status Codes"
+              id="d8e2e9f0-cb31-452f-b6c0-761657741e42"
+              name="Valid HTTP Status Codes"
+            ><con:configuration><codes
+                >200</codes></con:configuration></con:assertion><con:credentials
+            ><con:authType
+              >No Authorization</con:authType></con:credentials><con:jmsConfig
+              JMSDeliveryMode="PERSISTENT"
+            /><con:jmsPropertyConfig /><con:parameters
+            /></con:restRequest></con:config></con:testStep><con:properties
+      /></con:testCase><con:properties /></con:testSuite><con:properties
+  /><con:wssContainer /><con:oAuth2ProfileContainer
+  /><con:oAuth1ProfileContainer /></con:soapui-project>
