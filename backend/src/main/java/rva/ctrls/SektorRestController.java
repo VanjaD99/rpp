@@ -1,6 +1,7 @@
 package rva.ctrls;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import rva.jpa.Sektor;
-import rva.repository.SektorRepository;
+import rva.services.SektorService;;
 
 @CrossOrigin
 @RestController
@@ -28,7 +29,7 @@ import rva.repository.SektorRepository;
 public class SektorRestController {
 	
 	@Autowired
-	private SektorRepository sektorRepository;
+	private SektorService sektorService;
 	
 	
 	@Autowired
@@ -37,26 +38,26 @@ public class SektorRestController {
 	@GetMapping("sektor")
 	@ApiOperation(value = "Vraca kolekciju svih sektora")
 	public Collection<Sektor> getSektori(){
-		return sektorRepository.findAll();
+		return sektorService.getAll();
 	}
 	
 	@GetMapping("sektor/{id}")
 	@ApiOperation(value = "Vraca sektor po id-ju")
-	public Sektor getSektor(@PathVariable ("id") Integer id) {
-		return sektorRepository.getOne(id);
+	public Optional<Sektor> getSektor(@PathVariable ("id") Integer id) {
+		return sektorService.findById(id);
 	}
 	
 	@GetMapping("sektorNaziv/{naziv}")
 	@ApiOperation(value = "Vraca sektor po nazivu")
 	public Collection<Sektor> getSektorByNaziv(@PathVariable ("naziv") String naziv){
-		return sektorRepository.findByNazivContainingIgnoreCase(naziv);
+		return sektorService.findByNazivContainingIgnoreCase(naziv);
 	}
 	
 	@PostMapping("sektor")
 	@ApiOperation(value = "Dodaje novi sektor")
 	public ResponseEntity<Sektor> insertSektor(@RequestBody Sektor sektor){
-		if(!sektorRepository.existsById(sektor.getId())) {
-			sektorRepository.save(sektor);
+		if(!sektorService.existsById(sektor.getId())) {
+			sektorService.save(sektor);
 			return new ResponseEntity<Sektor>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Sektor>(HttpStatus.CONFLICT);
@@ -65,11 +66,11 @@ public class SektorRestController {
 	@PutMapping("sektor")
 	@ApiOperation(value = "Izmena postojeceg sektora")
 	public ResponseEntity<Sektor> updateSektor(@RequestBody Sektor sektor){
-		if(!sektorRepository.existsById(sektor.getId())) {
+		if(!sektorService.existsById(sektor.getId())) {
 			return new ResponseEntity<Sektor>(HttpStatus.NO_CONTENT);
 			
 		}
-		sektorRepository.save(sektor);
+		sektorService.save(sektor);
 		return new ResponseEntity<Sektor>(HttpStatus.OK);
 	}
 	
@@ -77,12 +78,12 @@ public class SektorRestController {
 	@DeleteMapping("sektor/{id}")
 	@ApiOperation(value = "Brisanje sektora po id-ju")
 	public ResponseEntity<Sektor> deleteSektor(@PathVariable ("id") Integer id){
-		if(!sektorRepository.existsById(id)) {
+		if(!sektorService.existsById(id)) {
 			return new ResponseEntity<Sektor>(HttpStatus.NO_CONTENT);
 		}
 		
 		jdbcTemplate.execute("DELETE FROM radnik WHERE sektor=" + id);
-		sektorRepository.deleteById(id);
+		sektorService.deleteById(id);
 		
 		if(id == -100) {
 			jdbcTemplate.execute("INSERT INTO \"sektor\" (\"id\", \"naziv\", \"oznaka\", \"preduzece\")"

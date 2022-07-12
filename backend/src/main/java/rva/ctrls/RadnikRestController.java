@@ -1,6 +1,7 @@
 package rva.ctrls;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,18 +20,18 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import rva.jpa.Radnik;
 import rva.jpa.Sektor;
-import rva.repository.RadnikRepository;
-import rva.repository.SektorRepository;
+import rva.services.RadnikService;
+import rva.services.SektorService;
 
 @CrossOrigin
 @RestController
 @Api(tags = {"Radnik CRUD operacije"})
 public class RadnikRestController {
 	@Autowired
-	private RadnikRepository radnikRepository;
+	private RadnikService radnikService;
 	
 	@Autowired
-	private SektorRepository sektorRepository;
+	private SektorService sektorService;
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -38,34 +39,34 @@ public class RadnikRestController {
 	@GetMapping("radnik")
 	@ApiOperation(value = "Vraca kolekciju svih radnik")
 	public Collection<Radnik> getRadnici(){
-		return radnikRepository.findAll();
+		return radnikService.getAll();
 	}
 	
 	@GetMapping("radnik/{id}")
 	@ApiOperation(value = "Vraca radnika po id-ju")
-	public Radnik getRadnik(@PathVariable ("id") Integer id) {
-		return radnikRepository.getOne(id);
+	public Optional<Radnik> getRadnik(@PathVariable ("id") Integer id) {
+		return radnikService.findById(id);
 	}
 	
 	@GetMapping("radnikBySektor/{id}")
 	@ApiOperation(value = "Vraca radnike po sektoru")
 	public Collection<Radnik> getRadnikBySektor(@PathVariable ("id") Integer id){
-		Sektor s = sektorRepository.getOne(id);
-		return radnikRepository.findBySektor(s);
+		Optional<Sektor> s = sektorService.findById(id);
+		return radnikService.findBySektor(s);
 	}
 	
 	@GetMapping("radnikByLk/{broj_lk}")
 	@ApiOperation(value = "Vraca radnika po vrednosti manjoj od unete licne karte")
 	public Collection<Radnik> getRadnikByLk(@PathVariable ("broj_lk") Integer broj_lk){
-		return radnikRepository.findByBrojLkLessThanOrderById(broj_lk);
+		return radnikService.findByBrojLkLessThanOrderById(broj_lk);
 	}
 	
 	@PostMapping("radnik")
 	@ApiOperation(value = "Dodavanje novog radnika")
 	public ResponseEntity<Radnik> insertRadnik(@RequestBody Radnik radnik){
-		if(!radnikRepository.existsById(radnik.getId())) {
-			radnik.setBrojLk(radnikRepository.nextLicnaKarta(radnik.getSektor().getId()));
-			radnikRepository.save(radnik);
+		if(!radnikService.existsById(radnik.getId())) {
+			radnik.setBrojLk(radnikService.nextLicnaKarta(radnik.getSektor().getId()));
+			radnikService.save(radnik);
 			return new ResponseEntity<Radnik>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Radnik>(HttpStatus.CONFLICT);
@@ -75,21 +76,21 @@ public class RadnikRestController {
 	@PutMapping("radnik")
 	@ApiOperation(value = "Izmena postojeceg radnika")
 	public ResponseEntity<Radnik> updateRadnik(@RequestBody Radnik radnik){
-		if(!radnikRepository.existsById(radnik.getId())) {
+		if(!radnikService.existsById(radnik.getId())) {
 			return new ResponseEntity<Radnik>(HttpStatus.CONFLICT);
 			
 		}
-		radnikRepository.save(radnik);
+		radnikService.save(radnik);
 		return new ResponseEntity<Radnik>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("radnik/{id}")
 	@ApiOperation(value = "Brisanje radnika po id-ju")
 	public ResponseEntity<Radnik> deleteRadnik(@PathVariable Integer id){
-		if(!radnikRepository.existsById(id)) {
+		if(!radnikService.existsById(id)) {
 			return new ResponseEntity<Radnik>(HttpStatus.NO_CONTENT);
 		}
-		radnikRepository.deleteById(id);
+		radnikService.deleteById(id);
 		if(id == -100) {
 			jdbcTemplate.execute("INSERT INTO \"radnik\" (\"id\", \"ime\", \"prezime\", \"broj_lk\", \"obrazovanje\" ,\"sektor\" )"
 					+ "VALUES (-100,'izmenjeno','TEST',223,1,1)");

@@ -1,8 +1,7 @@
 package rva.ctrls;
 
 import java.util.Collection;
-
-import javax.transaction.Transactional;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import rva.jpa.Preduzece;
-import rva.repository.PreduzeceRepository;
+
+import rva.services.PreduzeceService;
 
 @CrossOrigin
 @RestController
@@ -28,7 +28,7 @@ import rva.repository.PreduzeceRepository;
 public class PreduzeceRestController {
 	
 	@Autowired
-	private PreduzeceRepository preduzeceRepository;
+	private PreduzeceService preduzececeService;
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -36,27 +36,27 @@ public class PreduzeceRestController {
 	@GetMapping("preduzece")
 	@ApiOperation(value = "Vraca kolekciju svih preduzeca")
 	public Collection<Preduzece> getPreduzeca(){
-		return preduzeceRepository.findAll();
+		return preduzececeService.getAll();
 	}
 	
 	@GetMapping("preduzece/{id}")
 	@ApiOperation(value = "Vraca preduzece po id-ju")
-	public Preduzece getPreduzece(@PathVariable ("id") Integer id) {
-		return preduzeceRepository.getOne(id);
+	public Optional<Preduzece> getPreduzece(@PathVariable ("id") Integer id) {
+		return preduzececeService.findById(id);
 	}
 	
 	
 	@GetMapping("preduzeceNaziv/{naziv}")
 	@ApiOperation(value = "Vraca kolekciju preduzece po nazivu")
 	public Collection<Preduzece> getPreduzeceByNaziv(@PathVariable ("naziv") String naziv){
-		return preduzeceRepository.findByNazivContainingIgnoreCase(naziv);
+		return preduzececeService.findByNazivContainingIgnoreCase(naziv);
 	}
 	
 	@PostMapping("preduzece")
 	@ApiOperation(value = "Dodaje novo preduzece")
 	public ResponseEntity<Preduzece> insertPreduzece(@RequestBody Preduzece preduzece){
-		if(!preduzeceRepository.existsById(preduzece.getId())) {
-			preduzeceRepository.save(preduzece);
+		if(!preduzececeService.existsById(preduzece.getId())) {
+			preduzececeService.save(preduzece);
 			return new ResponseEntity<Preduzece>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Preduzece>(HttpStatus.CONFLICT);
@@ -66,11 +66,11 @@ public class PreduzeceRestController {
 	@PutMapping("preduzece")
 	@ApiOperation(value = "Menja postojece preduzece")
 	public ResponseEntity<Preduzece> updatePreduzece(@RequestBody Preduzece preduzece){
-		if(!preduzeceRepository.existsById(preduzece.getId())) {
+		if(!preduzececeService.existsById(preduzece.getId())) {
 			return new ResponseEntity<Preduzece>(HttpStatus.CONFLICT);
 			
 		}
-		preduzeceRepository.save(preduzece);
+		preduzececeService.save(preduzece);
 		return new ResponseEntity<Preduzece>(HttpStatus.OK);
 	}
 	
@@ -78,12 +78,12 @@ public class PreduzeceRestController {
 	@DeleteMapping("preduzece/{id}")
 	@ApiOperation(value = "Brise preduzece po id-ju")
 	public ResponseEntity<Preduzece> deletePreduzece(@PathVariable Integer id){
-		if(!preduzeceRepository.existsById(id)) {
+		if(!preduzececeService.existsById(id)) {
 			return new ResponseEntity<Preduzece>(HttpStatus.NO_CONTENT);
 		}
 		
 		jdbcTemplate.execute("DELETE FROM sektor WHERE preduzece=" + id);
-		preduzeceRepository.deleteById(id);
+		preduzececeService.deleteById(id);
 		if(id == -100) {
 			jdbcTemplate.execute("INSERT INTO \"preduzece\" (\"id\", \"naziv\", \"pib\", \"sediste\", \"opis\")"
 					+ "VALUES (-100,'TEST',223,'TEST','TEST')");

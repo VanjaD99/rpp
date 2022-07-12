@@ -1104,7 +1104,7 @@
           /><con:jmsPropertyConfig /><con:parameters
           /></con:request></con:method></con:resource></con:interface><con:testSuite
     id="6706debc-3632-41d6-a0d6-a5236ca1ed47"
-    name="it10g2018 TestSuite"
+    name="ii79g2018 TestSuite"
   ><con:description
     >TestSuite generated for REST Service [http://localhost:8083]</con:description><con:settings
     /><con:runType>SEQUENTIAL</con:runType><con:testCase
